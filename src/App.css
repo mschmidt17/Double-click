@@ -1,38 +1,57 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+h3 {
+  margin-top: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+small {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icon {
+  color: red;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.loveMe {
+  position: relative;
+  margin: auto;
+  width: 300px;
+  max-width: 100%;
+  height: 440px;
+  background: url('https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2019/03/07/adfd3e94-9352-4337-ae32-5fd7ec70ca02/italo-ferreira-surfs-pipeline')
+    no-repeat center center/cover;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.icon {
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  animation: grow 0.6s linear;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+
+@keyframes grow {
   to {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
   }
 }
