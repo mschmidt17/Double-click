@@ -43,11 +43,11 @@ function App() {
 
   return (
     <div className="App">
-      <h3>
+      <h3 className='text'>
         Double click on the image to{' '}
         <Icon icon={<FaHeart />} className="icon" /> it.
       </h3>
-      <small>
+      <small className='text'>
         You liked it
         <span> {times} </span>
         times
